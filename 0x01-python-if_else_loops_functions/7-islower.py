@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def islower(c):
     ltr = ord(c)
     if ltr >= 97 and ltr <= 122:
