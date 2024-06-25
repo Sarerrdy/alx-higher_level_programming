@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+
 """
 This script prints all City objects
-from this database `hbtn_0e_14_usa`.
+from the database `hbtn_0e_14_usa`.
 """
 
 from sys import argv
@@ -17,7 +18,10 @@ if __name__ == "__main__":
     """
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        argv[1], argv[2], argv[3])
+        argv[1],
+        argv[2],
+        argv[3]
+        )
     engine = create_engine(db_uri)
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
